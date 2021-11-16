@@ -16,3 +16,5 @@ VXSYS.EXE <drive_letter>
 ```
 
 VXSYS code can be found here: https://github.com/tpunix/vxworks-project/tree/master/vxsys
+
+After installing the bootloader you can copy all the files from the bootdrive folder and the system will boot.
