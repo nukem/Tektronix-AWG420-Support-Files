@@ -1,0 +1,65 @@
+/*                                                         */
+/* setup.inf                                               */
+/*                                      build#010402       */
+/*                                                         */
+/*             See $PROJECT/doc/setup.inf for more detail. */
+/*                                                         */
+
+
+/* installation parameters */
+/* target instrument */
+awg400 = 1
+awg500 = 2
+awg600 = 3
+awg700 = 4
+mtg300 = 5
+
+target = awg400
+
+/* install device */
+installerDevice = 1			/* 0 for diskettes, 1 for network */
+
+/* setup.inf */
+strcpy &installerSetupLabel, "PERSEUS_EXE"
+strcpy &installerSetupFromD, "setup.inf"
+strcpy &installerSetupFromN, "/product/awg400/setup.inf"
+strcpy &installerSetupTo, "/c0/setup.inf"	/* NEVER CHANGE */
+
+/* bootrom */
+strcpy &installerBootLabel, "BOOTPERSEUS"
+strcpy &installerBootFromD, "bootrom.sys"
+strcpy &installerBootFromN, "/product/awg400/bootrom.sys"
+strcpy &installerBootTo, "/c0/bootrom.sys"	/* NEVER CHANGE */
+
+/* os */
+strcpy &installerOsLabel, "OS_PERSEUS"
+strcpy &installerOsFromD, "perseus.os"
+strcpy &installerOsFromN, "/product/awg400/perseus.os"
+strcpy &installerOsTo, "/c0/perseus.os"		/* NEVER CHANGE */
+
+/* user program */
+strcpy &installerUsrLabel, "USR_PERSEUS"
+strcpy &installerUsrFromD, "cygnus"
+strcpy &installerUsrFromN, "/product/awg400/cygnus"
+strcpy &installerUsrTo, "/c0/cygnus"		/* NEVER CHANGE */
+
+/* network parameters */
+strcpy &installerSelfIp, "3.22.99.21"
+strcpy &installerSubnet, "255.0.0.0"
+strcpy &installerHostIp, "3.22.104.1"
+installerNetProtocol = 0
+
+/* operation parameters, NEVER CHANGE */
+/* system startup script */
+strcpy &sysStartupFile, "/c0/setup.inf"
+
+/* load & initial state */
+usrBootLevel = 2 /* 0 for BOOT_DONTLOAD, 1 for BOOT_LOAD, 2 for BOOT_LOADGO */
+strcpy &usrLoadFile, "/c0/cygnus"
+strcpy &usrInitDir, "/main"
+strcpy &usrStartupFile, "/main/usrStartup"
+
+/* user program entry point */
+strcpy &usrEntry, "_usrProgramEntry"
+
+/* the end of information file */
