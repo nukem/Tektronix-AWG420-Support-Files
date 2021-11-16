@@ -17,4 +17,4 @@ VXSYS.EXE <drive_letter>
 
 VXSYS code can be found here: https://github.com/tpunix/vxworks-project/tree/master/vxsys
 
-After installing the bootloader you can copy all the files from the bootdrive folder and the system will boot.
+After installing the bootloader you can copy all the files from the **[boot_drive](https://github.com/nukem/Tektronix-AWG420-Support-Files/tree/main/boot_drive)** folder and the system will boot.
